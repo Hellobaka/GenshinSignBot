@@ -1,37 +1,18 @@
-# BotDevelopmentFramework
+# GenshinSignBot
 
 #### 介绍
-CQ机器人开发白框架
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+原神米游社签到Bot
 
 #### 使用说明
+1. 安装插件
+2. 私聊Bot，输入指令 #原神签到
+3. 按提示完成配置
+4. 每日10点进行签到
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 配置说明
+数据目录`data\app\me.cqp.luohuaming.GenshinSign` 配置文件`Config.json` Cookie储存文件 `Cookies.json`
+![image](Config)
+- StartTime: 每日签到时间, 若要修改请保留原格式, 并且只修改时间部分, 日期部分不生效
+- BroadcastGroup: 每日签到结果通知的群号, 签到之后会将结果发送到这些群 (注意: 群号直接分隔请使用英文的逗号)
+- WaitSecond: 线程时间验证周期, 每隔多少秒查看时间是否到达了要签到的时间, 建议区间[20,60]
+- LastSign: 上次签到时间, 自动生成, 不需要修改
