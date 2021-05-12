@@ -34,7 +34,7 @@ namespace PublicInfos
         }
         public bool VerifySignTime(DateTime time)
         {
-            return time.Hour == StartTime.Hour && time.Minute == StartTime.Minute && time.Second == StartTime.Second;
+            return time.Hour == StartTime.Hour && time.Minute == StartTime.Minute;
         }
     }
 

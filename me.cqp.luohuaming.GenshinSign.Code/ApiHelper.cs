@@ -58,7 +58,7 @@ namespace me.cqp.luohuaming.GenshinSign.Code
             };
             http.Headers.Add("X-Requested-With", "com.mihoyo.hyperion");
             http.Headers.Add("Origin", "https://webstatic.mihoyo.com");
-            if(userdeviceid)
+            if (userdeviceid)
                 http.Headers.Add("x-rpc-device_id", Guid.NewGuid().ToString());
             http.CookieCollection = CommonHelper.CookieStr2Collection(cookie);
             return http;
@@ -193,22 +193,12 @@ namespace me.cqp.luohuaming.GenshinSign.Code
                         {
                             SignFunction();
                         }
-                        //if (DateTime.Now.Hour - MainSave.AppConfig.StartTime.Hour > 1 && MainSave.TodaySignFlag is false)
-                        //{
-                        //    List<CookieObject> UnsignLs = new List<CookieObject>();
-                        //    foreach (var item in MainSave.CookieList)
-                        //    {
-                        //        if (item.Useable is false)
-                        //            continue;
-                        //        if (GetSignStatus(item) is false)
-                        //            UnsignLs.Add(item);
-                        //    }
-                        //    if (UnsignLs.Count != 0)
-                        //    {
-                        //        SignFunction();
-                        //    }
-                        //    Thread.Sleep(60 * 60 * 1000);
-                        //}
+                        //如果未签到且当前时间大于签到时间90秒则进行签到
+                        var t = new DateTime(1970, 1, 1, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+                        if ((t - MainSave.AppConfig.StartTime).TotalSeconds > 90 && MainSave.TodaySignFlag is false)
+                        {
+                            SignFunction();
+                        }
                     }
                     catch (Exception e)
                     {
@@ -231,6 +221,7 @@ namespace me.cqp.luohuaming.GenshinSign.Code
             List<CookieObject> SuccessList = new List<CookieObject>();
             List<CookieObject> FailList = new List<CookieObject>();
             int alreadySignCount = 0;
+            MainSave.TodaySignFlag = true;
             foreach (var item in MainSave.CookieList)
             {
                 if (item.Useable is false)
@@ -250,7 +241,6 @@ namespace me.cqp.luohuaming.GenshinSign.Code
                 }
                 Thread.Sleep(5000);
             }
-            MainSave.TodaySignFlag = true;
             StringBuilder sb = new StringBuilder();
             int successCount = SuccessList.Count, failCount = FailList.Count;
             sb.AppendLine($"原神签到小助手 - {DateTime.Now.ToLongDateString()}");
