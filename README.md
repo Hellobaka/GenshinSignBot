@@ -11,7 +11,7 @@
 
 #### 配置说明
 数据目录`data\app\me.cqp.luohuaming.GenshinSign` 配置文件`Config.json` Cookie储存文件 `Cookies.json`
-![image](Config)
+![Config](https://user-images.githubusercontent.com/50934714/117919658-fb83a980-b31f-11eb-8f55-c5b85440284c.png)
 - StartTime: 每日签到时间, 若要修改请保留原格式, 并且只修改时间部分, 日期部分不生效
 - BroadcastGroup: 每日签到结果通知的群号, 签到之后会将结果发送到这些群 (注意: 群号直接分隔请使用英文的逗号)
 - WaitSecond: 线程时间验证周期, 每隔多少秒查看时间是否到达了要签到的时间, 建议区间[20,60]
