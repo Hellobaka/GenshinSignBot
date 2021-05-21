@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PublicInfos
+namespace me.cqp.luohuaming.GenshinSign.PublicInfos
 {
     /// <summary>
     /// 函数处理结果

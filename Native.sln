@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "me.cqp.luohuaming.GenshinSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "me.cqp.luohuaming.GenshinSign.UI", "me.cqp.luohuaming.GenshinSign.UI\me.cqp.luohuaming.GenshinSign.UI.csproj", "{6E9094E7-EB54-4BDD-9CAF-EAC840E35362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicInfos", "PublicInfos\PublicInfos.csproj", "{9CA41650-71F2-4F0C-9A80-9CDB5A7D593C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "me.cqp.luohuaming.GenshinSign.PublicInfos", "PublicInfos\me.cqp.luohuaming.GenshinSign.PublicInfos.csproj", "{9CA41650-71F2-4F0C-9A80-9CDB5A7D593C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "me.cqp.luohuaming.GenshinSign.CodeTests", "me.cqp.luohuaming.GenshinSign.CodeTests\me.cqp.luohuaming.GenshinSign.CodeTests.csproj", "{9FFCF620-C3B4-4A29-9385-04440574B90C}"
 EndProject

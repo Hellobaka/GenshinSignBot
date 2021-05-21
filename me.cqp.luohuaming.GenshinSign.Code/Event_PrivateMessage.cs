@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using me.cqp.luohuaming.GenshinSign.Sdk.Cqp.EventArgs;
-using PublicInfos;
+using me.cqp.luohuaming.GenshinSign.PublicInfos;
 
 namespace me.cqp.luohuaming.GenshinSign.Code
 {

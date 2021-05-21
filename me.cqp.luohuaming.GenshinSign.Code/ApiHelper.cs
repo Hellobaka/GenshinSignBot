@@ -11,7 +11,7 @@ using System.Web;
 using me.cqp.luohuaming.GenshinSign.Tool.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using PublicInfos;
+using me.cqp.luohuaming.GenshinSign.PublicInfos;
 
 namespace me.cqp.luohuaming.GenshinSign.Code
 {

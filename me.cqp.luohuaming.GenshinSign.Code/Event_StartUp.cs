@@ -3,7 +3,7 @@ using System.IO;
 using me.cqp.luohuaming.GenshinSign.Code.OrderFunctions;
 using me.cqp.luohuaming.GenshinSign.Sdk.Cqp.EventArgs;
 using me.cqp.luohuaming.GenshinSign.Sdk.Cqp.Interface;
-using PublicInfos;
+using me.cqp.luohuaming.GenshinSign.PublicInfos;
 
 namespace me.cqp.luohuaming.GenshinSign.Code
 {

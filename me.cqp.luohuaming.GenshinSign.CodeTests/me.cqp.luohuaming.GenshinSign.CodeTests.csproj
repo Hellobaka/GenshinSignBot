@@ -66,9 +66,9 @@
       <Project>{7A675AAC-50C1-49A8-A663-9CAA6674C614}</Project>
       <Name>me.cqp.luohuaming.GenshinSign.Code</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PublicInfos\PublicInfos.csproj">
+    <ProjectReference Include="..\PublicInfos\me.cqp.luohuaming.GenshinSign.PublicInfos.csproj">
       <Project>{9CA41650-71F2-4F0C-9A80-9CDB5A7D593C}</Project>
-      <Name>PublicInfos</Name>
+      <Name>me.cqp.luohuaming.GenshinSign.PublicInfos</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

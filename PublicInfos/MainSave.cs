@@ -4,7 +4,7 @@ using System.IO;
 using me.cqp.luohuaming.GenshinSign.Sdk.Cqp;
 using me.cqp.luohuaming.GenshinSign.Tool.Http;
 
-namespace PublicInfos
+namespace me.cqp.luohuaming.GenshinSign.PublicInfos
 {
     public static class MainSave
     {

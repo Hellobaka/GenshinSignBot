@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using me.cqp.luohuaming.GenshinSign.Sdk.Cqp.Model;
 using me.cqp.luohuaming.GenshinSign.Tool.IniConfig;
 
-namespace PublicInfos
+namespace me.cqp.luohuaming.GenshinSign.PublicInfos
 {
     public static class CommonHelper
     {

@@ -5,7 +5,7 @@ using System.Text;
 using me.cqp.luohuaming.GenshinSign.Sdk.Cqp.EventArgs;
 using Newtonsoft.Json;
 
-namespace PublicInfos
+namespace me.cqp.luohuaming.GenshinSign.PublicInfos
 {
     public enum SignStatus
     {
