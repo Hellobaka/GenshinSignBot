@@ -8,7 +8,7 @@
 2. 私聊Bot，输入指令 #原神签到
 3. 按提示完成配置
 4. 每日10点进行签到
-
+5. 如要临时重新签到, 请打开`Config.json`, 修改`LastSign`字段为昨天或昨天以前的时间(请保证时间格式), 重载即可, 插件会90秒之后进行重新签到
 #### 配置说明
 数据目录`data\app\me.cqp.luohuaming.GenshinSign` 配置文件`Config.json` Cookie储存文件 `Cookies.json`
 ![Config](https://user-images.githubusercontent.com/50934714/117919658-fb83a980-b31f-11eb-8f55-c5b85440284c.png)
