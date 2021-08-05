@@ -25,10 +25,15 @@
 2. 按F12
 3. 会有断点妨碍抓包，单击红框内按钮禁用断点，之后点击左侧蓝色按钮
 ![image.png](https://i.loli.net/2021/08/05/8NlkLvzMDeEG3gq.png)
+
 3. 顶部切换到Network页
- ![image.png](https://i.loli.net/2021/08/05/PAvnqCEOt9BR5kW.png)
+
+![image.png](https://i.loli.net/2021/08/05/PAvnqCEOt9BR5kW.png)
+ 
 4. 此时登录，成功登录之后下一步
 5. 单击这两个里面任一个
- ![image.png](https://i.loli.net/2021/08/05/HwDxJAZCPfsmaUW.png)
+
+![image.png](https://i.loli.net/2021/08/05/HwDxJAZCPfsmaUW.png)
+ 
 复制下这里的Cookie，右键，Copy value即可
 5. 之后就可以将Cookie交给Bot了
