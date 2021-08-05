@@ -229,17 +229,20 @@ namespace me.cqp.luohuaming.GenshinSign.Code
                 var result = DoSign(item);
                 if (result == SignStatus.OK)
                 {
+                    MainSave.CQLog.Info("签到成功", $"昵称为:{item.NickName} 签到成功");
                     SuccessList.Add(item);
                 }
                 else if (result == SignStatus.Fail)
                 {
+                    MainSave.CQLog.Info("签到失败", $"昵称为:{item.NickName} 签到失败！待30s重新尝试");
                     FailList.Add(item);
                 }
                 else if (result == SignStatus.AlreadySign)
                 {
+                    MainSave.CQLog.Info("签到重复", $"昵称为:{item.NickName} 签到重复");
                     alreadySignCount++;
                 }
-                Thread.Sleep(5000);
+                Thread.Sleep(30000);
             }
             StringBuilder sb = new StringBuilder();
             int successCount = SuccessList.Count, failCount = FailList.Count;
@@ -259,12 +262,12 @@ namespace me.cqp.luohuaming.GenshinSign.Code
                     if (flag)
                     {
                         result = DoSign(item);
-                        if (result != SignStatus.OK)
+                        if (result != SignStatus.OK || result != SignStatus.AlreadySign)
                         {
                             for (int i = 0; i < 3; i++)
                             {
                                 result = DoSign(item);
-                                if (result == SignStatus.OK)
+                                if (result == SignStatus.OK || result == SignStatus.AlreadySign)
                                 {
                                     result = SignStatus.RetrySuccess;
                                     break;
@@ -272,7 +275,7 @@ namespace me.cqp.luohuaming.GenshinSign.Code
                                 Thread.Sleep(5000);
                                 if (i == 2)//3try fail
                                 {
-                                    MainSave.CQLog.Error("重新签到失败", $"QQ={item.QQID} 签到重试失败，建议联系作者或手动校验问题");
+                                    MainSave.CQLog.Error("重新签到失败", $"昵称={item.NickName} 签到重试失败，建议联系作者或手动校验问题");
                                     result = SignStatus.RetryFail;
                                 }
                             }
@@ -286,7 +289,7 @@ namespace me.cqp.luohuaming.GenshinSign.Code
                         item.Useable = false;
                         CookieObject.SaveObject();
                     }
-                    MainSave.CQLog.Info("失败校验", $"QQ={item.QQID} 的校验结果为：{GetSignStatusStr(result)}");
+                    MainSave.CQLog.Info("失败校验", $"昵称={item.NickName} 的校验结果为：{GetSignStatusStr(result)}");
                 }
             }
             sw.Stop();
